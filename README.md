@@ -1,3 +1,5 @@
+Description:
+------------
 Replaces the contents of the tab with the image that has the largest dimensions. If the tab currently displays a single image, instead returns to the previous page. Can be applied to the current tab or all tabs to the right.
 
 Installation:
