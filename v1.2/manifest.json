@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Largest Image Viewer",
-  "version": "1.7.2",  // Increment version number
+  "version": "1.2",
   "description": "View the largest image on a webpage",
   "permissions": ["activeTab", "contextMenus"],
   "commands": {
