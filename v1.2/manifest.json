@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+  "name": "Largest Image Viewer",
+  "version": "1.7.2",  // Increment version number
+  "description": "View the largest image on a webpage",
+  "permissions": ["activeTab", "contextMenus"],
+  "commands": {
+    "activateExtension": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E",
+        "mac": "MacCtrl+Shift+E"
+      },
+      "description": "Activate the extension on the current tab"
+    },
+    "activateAllTabsToRight": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "MacCtrl+Shift+F"
+      },
+      "description": "Activate the extension on all tabs to the right"
+    }
+  },
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "48": "icon.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
