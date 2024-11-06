@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "Largest Image Finder",
+  "version": "1.0",
+  "description": "Finds and shows the largest image on a webpage",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "contextMenus",
+    "commands",
+    "storage",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": "icon.png"
+  },
+  "commands": {
+    "activateExtension": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E"
+      },
+      "description": "Activate extension on current tab"
+    },
+    "activateAllTabsRightHotkey": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F"
+      },
+      "description": "Activate extension on all tabs to the right"
+    }
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
