@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Largest Image Finder",
+  "name": "Largest Image Viewer",
   "version": "1.0",
   "description": "Finds and shows the largest image on a webpage",
   "permissions": [
